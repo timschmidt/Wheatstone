@@ -1,13 +1,18 @@
 <?php
 
-
 use Thyyppa\Wheatstone\Object\Point;
 
 class PngExporterTest extends PHPUnit_Framework_TestCase {
 
+    /**
+     * @var
+     */
     private $exporter;
 
 
+    /**
+     *
+     */
     public function setUp()
     {
         parent::setUp();
@@ -16,6 +21,9 @@ class PngExporterTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     *
+     */
     public function testLineDraw()
     {
         $a = Mockery::mock( Point::class );
@@ -25,6 +33,9 @@ class PngExporterTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     *
+     */
     public function testFileOutput()
     {
         $this->testLineDraw();

@@ -3,9 +3,15 @@
 
 class CameraTest extends PHPUnit_Framework_TestCase {
 
+    /**
+     * @var
+     */
     private $camera;
 
 
+    /**
+     *
+     */
     public function setUp()
     {
         parent::setUp();
@@ -14,6 +20,9 @@ class CameraTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     *
+     */
     public function testRotation()
     {
         $this->camera->rotate( 10, 10, 10 );
@@ -38,6 +47,9 @@ class CameraTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     *
+     */
     public function testPosition()
     {
         $this->camera->position( 10, 10, 10 );
@@ -67,6 +79,9 @@ class CameraTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     *
+     */
     public function testHasResolution()
     {
         $this->assertNotNull( $this->camera->width );
