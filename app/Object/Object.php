@@ -105,9 +105,9 @@ class Object {
     {
         foreach ( $this->polygons as $polygon ) {
             foreach ( $polygon->points as $point ) {
-                $point->x -= $this->position->x;
-                $point->y -= $this->position->y;
-                $point->z -= $this->position->z;
+                $point->x += $this->position->x;
+                $point->y += $this->position->y;
+                $point->z += $this->position->z;
             }
         }
     }
