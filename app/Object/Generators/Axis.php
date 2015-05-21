@@ -15,12 +15,12 @@ class Axis extends Generator {
 
         $axis[ ] = new Polygon( [
                                     new Point( 0, 0, 0 ),
-                                    new Point( 10000, 0, 0 ),
+                                    new Point( -10000, 0, 0 ),
                                 ] );
 
         $axis[ ] = new Polygon( [
                                     new Point( 0, 0, 0 ),
-                                    new Point( 0, 10000, 0 ),
+                                    new Point( 0, -10000, 0 ),
                                 ] );
 
         $axis[ ] = new Polygon( [
