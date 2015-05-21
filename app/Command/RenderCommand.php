@@ -37,7 +37,6 @@ class RenderCommand extends Command {
 
         $stl = new AsciiSTL( $input->getArgument( 'stl' ) );
 
-
         $scene = new Scene();
 
         $scene->addObject(
@@ -49,13 +48,12 @@ class RenderCommand extends Command {
         );
 
         $scene->addObject(
-            $stl->asObject()->position( 0, 7000, 0 )
+            $stl->asObject()->position( 0, 10000, 0 )
+                ->rotate( 0, 0, 180 )
         );
 
-
-        $scene->camera->position( -15000, -15000, 20000 )
-                      ->rotate( rand( -20, -10 ), rand( -60, 10 ), 0 );
-
+        $scene->camera->position( 0, 10000, -23000 )
+                      ->rotate( rand( -20, 20 ), rand( -20, 20 ), 0 );
 
         ( new Renderer( $scene ) )->render( $input->getArgument( 'output' ) );
     }
