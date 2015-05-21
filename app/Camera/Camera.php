@@ -18,11 +18,6 @@ class Camera {
     /**
      * @var int
      */
-    public $fov;
-
-    /**
-     * @var int
-     */
     public $width;
 
     /**
@@ -38,7 +33,6 @@ class Camera {
     {
         $this->position = new Position( 0, 0, 0 );
         $this->rotation = new Rotation( 0, 0, 0 );
-        $this->fov = 360;
         $this->width = 800;
         $this->height = 400;
     }

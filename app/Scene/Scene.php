@@ -44,8 +44,8 @@ class Scene {
     {
         $point = clone $point;
 
-        $point->x = ( $this->camera->width / 2 ) + $point->x * $this->camera->fov / ( $point->z + $this->camera->fov );
-        $point->y = ( $this->camera->height / 2 ) - $point->y * $this->camera->fov / ( $point->z + $this->camera->fov );
+        $point->x = ( $this->camera->width / 2 ) + $point->x * 360 / ( $point->z + 360 );
+        $point->y = ( $this->camera->height / 2 ) - $point->y * 360 / ( $point->z + 360 );
 
         return $point;
     }
