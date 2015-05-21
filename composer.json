@@ -1,0 +1,18 @@
+{
+    "name": "thyyppa/wheatstone",
+    "authors": [
+        {
+            "name": "Travis Hyyppä",
+            "email": "travishyyppa@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Thyyppa\\Wheatstone\\": "app/"
+        }
+    },
+    "require": {
+        "symfony/console": "v2.6.7",
+        "symfony/yaml": "^2.6"
+    }
+}
