@@ -26,7 +26,7 @@ class Point {
     public function __construct( $x, $y, $z = null )
     {
         $this->x = $x;
-        $this->y = -$y;
+        $this->y = $y;
         $this->z = $z;
     }
 
