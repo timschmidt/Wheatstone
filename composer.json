@@ -1,18 +1,23 @@
 {
-    "name": "thyyppa/wheatstone",
-    "authors": [
-        {
-            "name": "Travis Hyyppä",
-            "email": "travishyyppa@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Thyyppa\\Wheatstone\\": "app/"
-        }
-    },
-    "require": {
-        "symfony/console": "v2.6.7",
-        "symfony/yaml": "^2.6"
+  "name": "thyyppa/wheatstone",
+  "authors": [
+    {
+      "name": "Travis Hyyppä",
+      "email": "travishyyppa@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Thyyppa\\Wheatstone\\": "app/"
+    }
+  },
+  "require": {
+    "symfony/console": "v2.6.7",
+    "symfony/yaml": "^2.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "mockery/mockery": "~0.9",
+    "kujira/phpunit-printer": "~1.0"
+  }
 }
