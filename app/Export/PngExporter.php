@@ -29,8 +29,10 @@ class PngExporter implements ExporterInterface {
 
         $this->image = new Imagick();
         $this->image->newImage( $width, $height, $background_color->asPixel() );
+        $this->image->setImageFormat( 'png' );
 
         $this->buffer = new ImagickDraw();
+        $this->buffer->setFillColor( '#FFFFFF' );
     }
 
 
@@ -59,7 +61,6 @@ class PngExporter implements ExporterInterface {
     public function output( $filename )
     {
         $this->image->drawImage( $this->buffer );
-        $this->image->setImageFormat( 'png' );
         $this->image->writeImage( $filename );
     }
 }
