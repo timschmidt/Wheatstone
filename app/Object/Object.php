@@ -36,7 +36,7 @@ class Object {
      * @param array $polygons
      * @param Color $color
      */
-    public function __construct( $polygons = [ ], Color $color = null )
+    public function __construct( $polygons, Color $color = null )
     {
         $this->polygons = unserialize( serialize( $polygons ) ); // Break references
         $this->rotation = new Rotation( 0, 0, 0 );
