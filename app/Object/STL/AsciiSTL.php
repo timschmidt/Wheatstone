@@ -50,13 +50,26 @@ class AsciiSTL extends STL {
 
         array_shift( $output );
 
+        if ( ! is_array( $output ) ) {
+
+            return false;
+
+        }
+
         array_walk( $output, function ( &$value ) {
+
+            if ( ! is_array( $value ) ) {
+
+                return false;
+
+            }
 
             array_walk( $value, function ( &$item ) {
 
                 $item = pack( 'l', $item );
 
             } );
+
 
             $this->polygons[ ] = $this->createPolygon(
                 implode( '', $value ) . "\000\000"
